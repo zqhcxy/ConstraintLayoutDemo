@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textviewa_tv"
+        style="@style/textStyle"
+        android:layout_marginRight="150dp"
+        android:text="Textview A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textviewb_tv"
+        style="@style/textStyle"
+        android:layout_marginRight="50dp"
+        android:text="Textview B"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewa_tv" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="textviewa_tv,textviewb_tv" />
+
+    <TextView
+        android:id="@+id/textviewc_tv"
+        style="@style/textStyle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView C"
+        app:layout_constraintLeft_toRightOf="@id/barrier1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/group_textview_a"
+        style="@style/textStyle"
+        android:text="Group A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/group_textview_b"
+        app:layout_constraintTop_toBottomOf="@+id/textviewb_tv" />
+
+    <TextView
+        android:id="@+id/group_textview_b"
+        style="@style/textStyle"
+        android:text="Group B"
+        app:layout_constraintLeft_toRightOf="@+id/group_textview_a"
+        app:layout_constraintRight_toLeftOf="@id/group_textview_c"
+        app:layout_constraintTop_toBottomOf="@+id/textviewb_tv" />
+
+    <TextView
+        android:id="@+id/group_textview_c"
+        style="@style/textStyle"
+        android:text="Group C"
+        app:layout_constraintLeft_toRightOf="@id/group_textview_b"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewb_tv" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="group_textview_a,group_textview_c" />
+
+    <Button
+        android:id="@+id/group_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_shpe"
+        android:padding="2dp"
+        android:text="show or hid Group"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_textview_b" />
+
+    <android.support.constraint.Placeholder
+        android:id="@+id/placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:content="@+id/placeholder_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_btn" />
+
+
+    <TextView
+        android:id="@+id/placeholder_tv"
+        style="@style/textStyle"
+        android:text="placeholder tetxview" />
+
+    <TextView
+        android:id="@+id/placeholder_btn"
+        style="@style/textStyle"
+        android:background="@drawable/circle_shpe"
+        android:text="palceholder btn"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp"/>
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="73dp" />
+
+</android.support.constraint.ConstraintLayout>

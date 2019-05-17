@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/relative_text1"
+        style="@style/textStyle"
+        android:text="text one"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/relative_text2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/relative_text2"
+        style="@style/textStyle"
+        android:text="text two"
+        app:layout_constraintLeft_toRightOf="@+id/relative_text1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/one"
+        style="@style/textStyle"
+        android:text="one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/two"
+        app:layout_constraintTop_toBottomOf="@+id/relative_text1" />
+
+    <TextView
+        android:id="@+id/two"
+        style="@style/textStyle"
+        android:text="two"
+        app:layout_constraintLeft_toRightOf="@+id/one"
+        app:layout_constraintRight_toRightOf="@+id/three"
+        app:layout_constraintTop_toBottomOf="@+id/relative_text1" />
+
+    <TextView
+        android:id="@+id/three"
+        style="@style/textStyle"
+        android:text="three"
+        app:layout_constraintLeft_toRightOf="@+id/two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_text1" />
+
+
+    <TextView
+        android:id="@+id/four"
+        style="@style/textStyle"
+        android:text="four"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/five"
+        app:layout_constraintTop_toBottomOf="@+id/one" />
+
+    <TextView
+        android:id="@+id/five"
+        style="@style/textStyle"
+        android:text="five"
+        app:layout_constraintLeft_toRightOf="@+id/four"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/one" />
+
+    <TextView
+        android:id="@+id/six"
+        style="@style/textStyle"
+        android:layout_marginTop="0dp"
+        android:text="six"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/seven"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+
+    <TextView
+        android:id="@+id/seven"
+        style="@style/textStyle"
+        android:layout_marginTop="0dp"
+        android:text="seven"
+        app:layout_constraintLeft_toRightOf="@+id/six"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+
+    <TextView
+        android:id="@+id/eight"
+        style="@style/textStyle"
+        android:padding="20dp"
+        android:text="eight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/six" />
+
+    <TextView
+        android:id="@+id/night"
+        style="@style/textStyle"
+        android:text="night"
+        app:layout_constraintBaseline_toBaselineOf="@+id/eight"
+        app:layout_constraintLeft_toRightOf="@+id/eight"
+        app:layout_constraintTop_toBottomOf="@+id/six" />
+
+
+    <TextView
+        android:id="@+id/first"
+        style="@style/textStyleFull"
+        android:text="First"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/second"
+        app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+    <TextView
+        android:id="@+id/second"
+        style="@style/textStyleFull"
+        android:text="second"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@+id/first"
+        app:layout_constraintRight_toLeftOf="@+id/third"
+        app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+    <TextView
+        android:id="@+id/third"
+        style="@style/textStyleFull"
+        android:text="third"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@+id/second"
+        app:layout_constraintRight_toLeftOf="@+id/fourth"
+        app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+    <TextView
+        android:id="@+id/fourth"
+        style="@style/textStyleFull"
+        android:text="Forth"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/third"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+    <TextView
+        android:id="@+id/whtextview1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/circle_shpe"
+        android:gravity="center"
+        android:text="whtextview1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first" />
+
+
+    <TextView
+        android:id="@+id/radius_tv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_shpe"
+        android:padding="10dp"
+        android:text="Radius-120 Angle-20"
+        app:layout_constraintCircle="@+id/whtextview1"
+        app:layout_constraintCircleAngle="40"
+        app:layout_constraintCircleRadius="110dp"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/radius_tv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_shpe"
+        android:padding="10dp"
+        android:text="Radius-136 Angle-310"
+        app:layout_constraintCircle="@+id/whtextview1"
+        app:layout_constraintCircleAngle="310"
+        app:layout_constraintCircleRadius="136dp"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
